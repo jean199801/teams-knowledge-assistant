@@ -1,0 +1,58 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.17/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.17",
+  "version": "0.1.0",
+  "id": "REPLACE-WITH-YOUR-AZURE-BOT-APP-ID",
+  "developer": {
+    "name": "Your Organization",
+    "websiteUrl": "https://your-bot-domain.example.com",
+    "privacyUrl": "https://your-bot-domain.example.com/privacy",
+    "termsOfUseUrl": "https://your-bot-domain.example.com/terms"
+  },
+  "name": {
+    "short": "Knowledge Bot",
+    "full": "Teams Knowledge Assistant"
+  },
+  "description": {
+    "short": "AI assistant that answers questions from your team's KM, Google Docs, and Notion.",
+    "full": "A Microsoft Teams bot that searches your internal knowledge sources (Wiki.js, Google Docs, Notion) and answers questions in natural language. Also supports personal notes, reminders, and publishing notes back to the KB."
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "accentColor": "#4F6BED",
+  "bots": [
+    {
+      "botId": "REPLACE-WITH-YOUR-AZURE-BOT-APP-ID",
+      "scopes": ["personal", "team", "groupChat"],
+      "supportsFiles": true,
+      "isNotificationOnly": false,
+      "commandLists": [
+        {
+          "scopes": ["personal"],
+          "commands": [
+            { "title": "#note",     "description": "Save a quick note (draft for later publishing)" },
+            { "title": "#remind",   "description": "Add a reminder (supports dates like 4/15 or 'tomorrow 2pm')" },
+            { "title": "#todo",     "description": "Show pending reminders" },
+            { "title": "#notes",    "description": "List recent notes (with publish/delete buttons)" },
+            { "title": "#done",     "description": "Mark a reminder as complete" },
+            { "title": "#publish",  "description": "Publish a note to KM or Google Docs" },
+            { "title": "#edit",     "description": "Edit a KB document (KM / Google Docs / Notion)" },
+            { "title": "#append",   "description": "Append content to an existing KB document" }
+          ]
+        },
+        {
+          "scopes": ["team", "groupChat"],
+          "commands": [
+            { "title": "help", "description": "Show usage" }
+          ]
+        }
+      ]
+    }
+  ],
+  "permissions": ["identity", "messageTeamMembers"],
+  "validDomains": [
+    "your-bot-domain.example.com"
+  ]
+}

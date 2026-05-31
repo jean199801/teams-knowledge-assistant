@@ -1,0 +1,51 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+*.tsbuildinfo
+
+# Environment & secrets
+.env
+.env.local
+.env.*.local
+credentials/
+*.pem
+*.key
+
+# Runtime data (knowledge base + user data — must not be committed)
+data/
+*.vector-store.json
+sync-state.json
+daily-reminder-state.json
+conversation-refs.json
+edit-sessions.json
+edit-logs.json
+
+# Deploy artifacts
+deploy*.zip
+*.zip
+
+# Azure / cloud platform files
+.deployment
+web.config
+publish-profile.xml
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+npm-debug.log*
+LogFiles/
+
+# Temp
+.tmp/
+tmp/
+
+# Local-only setup notes
+UPLOAD_INSTRUCTIONS.md
