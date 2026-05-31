@@ -1,5 +1,7 @@
 # Teams Knowledge Assistant
 
+🌐 **English** | [繁體中文](./README.zh-TW.md)
+
 > A Microsoft Teams bot that turns your scattered company knowledge — Wiki.js, Google Docs, Notion — into a single, conversational interface. Includes RAG with query rewriting, personal note-taking with image upload, and write-back to the knowledge base.
 
 Built and deployed to production at a 30-person e-commerce company, currently handling ~5,000 knowledge chunks across three sources.
